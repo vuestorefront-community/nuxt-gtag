@@ -18,7 +18,6 @@
     "precommit": "lint-staged",
     "prepack": "nuxt-module-build",
     "prepare": "node ./scripts/prepare.js",
-    "postinstall": "npm run dev:prepare",
     "release": "npx git-ensure -a && npx bumpp --commit --tag --push"
   },
   "dependencies": {

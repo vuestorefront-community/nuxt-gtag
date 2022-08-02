@@ -1,7 +1,7 @@
 import transformObjectKeys from 'transform-object-keys';
 import { getOptions } from '../../utils/getOptions';
 import { query } from './query';
-import {
+import type {
   EventParams,
   EventFunctions,
   EventFunctionsName,

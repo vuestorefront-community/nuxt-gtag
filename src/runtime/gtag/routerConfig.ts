@@ -1,12 +1,9 @@
 import { nextTick, useNuxtApp } from '#imports';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { RouteLocationNormalizedLoaded } from 'vue-router';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { isFunction } from '@vue/shared';
-import { getOptions } from '../utils/getOptions';
 import { createDataLayer } from './createDataLayer';
 import { trackRoute } from './trackRoute';
-import { Options } from '../../types';
+import type { Options, RouteLocationNormalized } from '../../types';
 
 export const routerTrackConfig = async (options: Options) => {
   const isRouteExcluded = (
@@ -16,7 +13,7 @@ export const routerTrackConfig = async (options: Options) => {
           name: string;
           [key: string]: unknown;
         }>
-      | RouteLocationNormalizedLoaded,
+      | RouteLocationNormalized,
   ) => {
     const { pageViewExcludedRoutes } = options;
     const isExcludedRoute = (
@@ -27,7 +24,7 @@ export const routerTrackConfig = async (options: Options) => {
             [key: string]: unknown;
           }>
         | string
-        | RouteLocationNormalizedLoaded,
+        | RouteLocationNormalized,
       // eslint-disable-next-line consistent-return
     ) => {
       if (typeof r === 'string') {

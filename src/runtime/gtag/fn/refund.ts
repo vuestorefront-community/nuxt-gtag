@@ -1,5 +1,6 @@
 import { event } from './event';
-import { GtagEvents, RefundParams } from '../../../types';
+import type { RefundParams } from '../../../types';
+import { GtagEvents } from '../../../types';
 
 export const refund = (params: RefundParams) => {
   event(GtagEvents.refund, params);

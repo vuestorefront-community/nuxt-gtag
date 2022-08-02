@@ -1,16 +1,15 @@
 import { useRoute, useRuntimeConfig } from '#app';
 import { joinURL } from 'ufo';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { RouteLocationNormalized } from 'vue-router';
-import { useNuxtApp } from '#imports';
 import { isBrowser } from '../../utils/isBrowser';
 import { getOptions } from '../../utils/getOptions';
 import { event } from './event';
-import {
-  GtagEvents,
+import type {
   PageViewParams,
   PageViewRouteParams,
+  RouteLocationNormalized,
 } from '../../../types';
+import { GtagEvents } from '../../../types';
 
 export const pageView = (
   param:

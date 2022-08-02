@@ -1,7 +1,7 @@
 import transformObjectKeys from 'transform-object-keys';
 import { getOptions } from '../../utils/getOptions';
 import { query } from './query';
-import { ControlParams, EventParams } from '../../../types';
+import type { ControlParams, EventParams } from '../../../types';
 
 export const config = (
   ...args: Array<ControlParams | EventParams | Record<string, unknown> | string>

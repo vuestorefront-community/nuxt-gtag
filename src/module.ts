@@ -1,7 +1,7 @@
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { defineNuxtModule, addPlugin } from '@nuxt/kit';
-import { Options } from './types';
+import type { Options } from './types';
 
 export interface ModuleOptions extends Options {}
 

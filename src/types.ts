@@ -1,5 +1,4 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { RouteLocationNormalized } from 'vue-router';
+export type RouteLocationNormalized = any;
 
 declare global {
   interface Window {

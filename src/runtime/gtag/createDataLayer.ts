@@ -1,9 +1,7 @@
-import transformObjectKeys from 'transform-object-keys';
 import { isBrowser } from '../utils/isBrowser';
-import { getOptions } from '../utils/getOptions';
 import { optOut } from './fn/optOut';
 import { GTAG_GLOBAL } from '../utils/global';
-import { Options } from '../../types';
+import type { Options } from '../../types';
 
 export const createDataLayer = (options: Options) => {
   if (!isBrowser()) {

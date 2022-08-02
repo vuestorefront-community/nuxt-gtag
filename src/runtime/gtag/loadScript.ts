@@ -1,9 +1,7 @@
-import { getOptions } from '../utils/getOptions';
 import { createDataLayer } from './createDataLayer';
 import { configureGtag } from './configureGtag';
-import { routerTrackConfig } from './routerConfig';
 import { loadExternalScript } from '../utils/loadExternalScript';
-import { Options } from '../../types';
+import type { Options } from '../../types';
 import { query } from './fn/query';
 
 export const loadScript = async (options: Options) => {

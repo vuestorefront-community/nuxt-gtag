@@ -1,6 +1,6 @@
 import { resolve } from 'path';
 import { fileURLToPath } from 'url';
-import { addPlugin, defineNuxtModule } from '@nuxt/kit';
+import { addPlugin, defineNuxtModule, extendViteConfig } from '@nuxt/kit';
 import { Options } from './runtime/types';
 
 export * from './runtime/types';
@@ -43,7 +43,12 @@ export default defineNuxtModule<ModuleOptions>({
   setup(options, nuxt) {
     if (options.enabled) {
       const runtimeDir = fileURLToPath(new URL('runtime', import.meta.url));
-      // nuxt.options.build.transpile.push(runtimeDir);
+      nuxt.options.build.transpile.push(runtimeDir);
+      extendViteConfig((config) => {
+        config.optimizeDeps = config.optimizeDeps || {};
+        config.optimizeDeps.include = config.optimizeDeps.include || [];
+        config.optimizeDeps.include.push('transform-object-keys');
+      });
 
       nuxt.options.runtimeConfig.public.gTag = ({ ...options } ||
         {}) as ModuleOptions;

@@ -2,7 +2,7 @@ import { createDataLayer } from './createDataLayer';
 import { configureGtag } from './configureGtag';
 import { loadExternalScript } from '../utils/loadExternalScript';
 import { query } from './fn/query';
-import { Options } from '../../module';
+import { Options } from '../types';
 
 export const loadScript = async (options: Options) => {
   const {

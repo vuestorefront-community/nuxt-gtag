@@ -5,7 +5,7 @@ import {
   EventParams,
   EventFunctions,
   EventFunctionsName,
-} from '../../../module';
+} from '../../types';
 
 export const event = <N extends EventFunctionsName>(
   name: N,

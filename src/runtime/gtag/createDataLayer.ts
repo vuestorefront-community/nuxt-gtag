@@ -1,7 +1,7 @@
 import { isBrowser } from '../utils/isBrowser';
 import { optOut } from './fn/optOut';
 import { GTAG_GLOBAL } from '../utils/global';
-import { Options } from '../../module';
+import { Options } from '../types';
 
 export const createDataLayer = (options: Options) => {
   if (!isBrowser()) {

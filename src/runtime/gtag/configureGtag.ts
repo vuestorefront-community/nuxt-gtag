@@ -1,6 +1,6 @@
 import transformObjectKeys from 'transform-object-keys';
 import { query } from './fn/query';
-import { Options } from '../../module';
+import { Options } from '../types';
 
 export const configureGtag = (options: Options) => {
   const { config, includes } = options;

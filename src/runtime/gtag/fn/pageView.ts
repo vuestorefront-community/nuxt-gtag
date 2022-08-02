@@ -9,7 +9,7 @@ import {
   PageViewParams,
   PageViewRouteParams,
   RouteLocationNormalized,
-} from '../../../module';
+} from '../../types';
 
 export const pageView = (
   param:

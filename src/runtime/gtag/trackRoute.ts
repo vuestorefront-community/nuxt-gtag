@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { isFunction } from '@vue/shared';
 import { pageView } from './fn/pageView';
-import { Options, RouteLocationNormalized } from '../../module';
+import { Options, RouteLocationNormalized } from '../types';
 
 export const trackRoute = (
   to: RouteLocationNormalized,

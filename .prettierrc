@@ -65,8 +65,5 @@
         "parser": "babel"
       }
     }
-  ],
-  "plugins": [
-    "prettier-plugin-tailwindcss"
   ]
 }

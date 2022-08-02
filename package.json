@@ -1,35 +1,30 @@
 {
-  "name": "my-module",
+  "name": "@vue-storefront/nuxt-gtag",
   "version": "1.0.0",
   "license": "MIT",
-  "type": "module",
-  "exports": {
-    ".": {
-      "import": "./dist/module.mjs",
-      "require": "./dist/module.cjs"
+  "contributors": [
+    {
+      "email": "heitor.ramon@gmail.com",
+      "name": "Heitor Ramon Ribeiro",
+      "url": "https://heitor.co"
     }
-  },
-  "main": "./dist/module.cjs",
-  "types": "./dist/types.d.ts",
-  "files": [
-    "dist"
   ],
   "scripts": {
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
-    "lint": "eslint . --ext .js,.ts,.vue --ignore-path .eslintignore --fix",
-    "lint:content": "markdownlint ./content && case-police 'content**/*.md'",
-    "lint:content:fix": "markdownlint ./content --fix && case-police 'content**/*.md' --fix",
-    "lint:fix": "eslint . --ext .js,.ts,.vue --ignore-path .eslintignore  --fix",
+    "lint": "eslint src --ext .js,.ts,.vue --ignore-path .eslintignore --fix",
+    "lint:fix": "eslint src --ext .js,.ts,.vue --ignore-path .eslintignore  --fix",
     "precommit": "lint-staged",
     "prepack": "nuxt-module-build",
-    "prepare": "node ./scripts/prepare.js && npm run dev:prepare",
+    "prepare": "node ./scripts/prepare.js",
+    "postinstall": "npm run dev:prepare",
     "release": "npx git-ensure -a && npx bumpp --commit --tag --push"
   },
   "dependencies": {
     "@nuxt/kit": "^3.0.0-rc.6",
-    "vue-gtag": "^2.0.1"
+    "transform-object-keys": "^1.0.7",
+    "ufo": "^0.8.5"
   },
   "devDependencies": {
     "@nuxt/module-builder": "latest",
@@ -44,5 +39,17 @@
     "lint-staged": "^13.0.3",
     "nuxt": "^3.0.0-rc.6",
     "prettier": "^2.7.1"
-  }
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/module.mjs",
+      "require": "./dist/module.cjs"
+    }
+  },
+  "main": "./dist/module.cjs",
+  "types": "./dist/types.d.ts",
+  "files": [
+    "dist"
+  ]
 }

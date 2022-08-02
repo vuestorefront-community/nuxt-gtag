@@ -101,5 +101,3 @@ Vue Storefront source code is completely free and released under the [MIT Licens
 
 
 [nuxt]: https://v3.nuxtjs.org/
-[nuxt-content]: https://content.nuxtjs.org/
-[tailwind-css]: https://tailwindcss.com/

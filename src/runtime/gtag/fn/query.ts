@@ -1,7 +1,7 @@
 import transformObjectKeys from 'transform-object-keys';
 import { isBrowser } from '../../utils/isBrowser';
 import { GTAG_GLOBAL } from '../../utils/global';
-import type { QueryParams } from '../../../types';
+import { QueryParams } from '../../../module';
 
 export const query = (...params: QueryParams) => {
   if (!isBrowser() || typeof window[GTAG_GLOBAL] === 'undefined') {

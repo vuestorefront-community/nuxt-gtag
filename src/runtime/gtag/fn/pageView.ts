@@ -4,12 +4,12 @@ import { joinURL } from 'ufo';
 import { isBrowser } from '../../utils/isBrowser';
 import { getOptions } from '../../utils/getOptions';
 import { event } from './event';
-import type {
+import {
+  GtagEvents,
   PageViewParams,
   PageViewRouteParams,
   RouteLocationNormalized,
-} from '../../../types';
-import { GtagEvents } from '../../../types';
+} from '../../../module';
 
 export const pageView = (
   param:

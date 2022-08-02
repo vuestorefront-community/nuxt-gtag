@@ -1,5 +1,5 @@
 import { useRuntimeConfig } from '#imports';
-import type { Options } from '../../types';
+import { Options } from '../../module';
 
 export const getOptions = (): Options => {
   return useRuntimeConfig()?.gTag as Options;

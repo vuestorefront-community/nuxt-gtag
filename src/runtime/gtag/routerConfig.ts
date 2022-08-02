@@ -3,7 +3,7 @@ import { nextTick, useNuxtApp } from '#imports';
 import { isFunction } from '@vue/shared';
 import { createDataLayer } from './createDataLayer';
 import { trackRoute } from './trackRoute';
-import type { Options, RouteLocationNormalized } from '../../types';
+import { Options, RouteLocationNormalized } from '../../module';
 
 export const routerTrackConfig = async (options: Options) => {
   const isRouteExcluded = (

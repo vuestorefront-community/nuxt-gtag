@@ -1,5 +1,5 @@
 import { defineNuxtConfig } from 'nuxt'
-import NuxtGTag from '..'
+import NuxtGTag from '../dist/module.mjs';
 
 export default defineNuxtConfig({
   modules: [

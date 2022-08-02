@@ -1,8 +1,8 @@
 import { createDataLayer } from './createDataLayer';
 import { configureGtag } from './configureGtag';
 import { loadExternalScript } from '../utils/loadExternalScript';
-import type { Options } from '../../types';
 import { query } from './fn/query';
+import { Options } from '../../module';
 
 export const loadScript = async (options: Options) => {
   const {

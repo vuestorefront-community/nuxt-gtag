@@ -1,6 +1,5 @@
 import { event } from './event';
-import type { ExceptionParams } from '../../../types';
-import { GtagEvents } from '../../../types';
+import { ExceptionParams, GtagEvents } from '../../../module';
 
 export const exception = (params: ExceptionParams) => {
   event(GtagEvents.exception, params);

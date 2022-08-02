@@ -1,6 +1,5 @@
 import { event } from './event';
-import type { PurchaseParams } from '../../../types';
-import { GtagEvents } from '../../../types';
+import { GtagEvents, PurchaseParams } from '../../../module';
 
 export const purchase = (params: PurchaseParams) => {
   event(GtagEvents.purchase, params);

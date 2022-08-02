@@ -1,11 +1,11 @@
 import transformObjectKeys from 'transform-object-keys';
 import { getOptions } from '../../utils/getOptions';
 import { query } from './query';
-import type {
+import {
   EventParams,
   EventFunctions,
   EventFunctionsName,
-} from '../../../types';
+} from '../../../module';
 
 export const event = <N extends EventFunctionsName>(
   name: N,

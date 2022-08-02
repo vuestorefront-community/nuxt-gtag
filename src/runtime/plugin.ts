@@ -1,4 +1,4 @@
-import { defineNuxtPlugin, useRuntimeConfig, useNuxtApp } from '#imports';
+import { defineNuxtPlugin, useRuntimeConfig } from '#imports';
 import { useDebug } from './helpers/useDebug';
 import { useGtag } from './composables/useGtag';
 import { loadScript } from './gtag/loadScript';

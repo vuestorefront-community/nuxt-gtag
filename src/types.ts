@@ -104,7 +104,6 @@ export enum GtagEvents {
 }
 
 export type EventParams = Partial<{
-  screenName: string;
   sendTo: string | string[] | null;
   value: number;
 }>;
@@ -430,7 +429,6 @@ export type QueryParams = Array<
 >;
 
 export type Options = Partial<{
-  appName: string;
   bootstrap: boolean;
   config: Partial<{
     id: string;

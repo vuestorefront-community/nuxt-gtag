@@ -1,11 +1,11 @@
 <br />
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/1626923/156934585-5c585b9f-53ff-4eee-beb3-a3a410c48d47.png" alt="Vue Storefront" />
+  <img src="./assets/nuxt-gtag.svg" alt="Nuxt GTag" />
 </p>
 
-<h3 align="center">
+<h1 align="center">
   nuxt-gtag
-</h3>
+</h1>
 <p align="center">
    Welcome to the nuxt-gtag Nuxt 3 module.
 </p>
@@ -71,6 +71,105 @@
 >   </div>
 > </div>
 
+## Setup
+
+1. Add `@vue-storefront/nuxt-gtag` dependency to your project
+
+```bash
+yarn add @vue-storefront/nuxt-gtag # or npm install @vue-storefront/nuxt-gtag
+```
+
+2. Add `@vue-storefront/nuxt-gtag` to the `modules` section of `nuxt.config.js`
+
+```typescript
+export default {
+  modules: [
+    // Simple usage
+    '@vue-storefront/nuxt-gtag',
+
+    // With options
+    ['@vue-storefront/nuxt-gtag', { /* module options */ }]
+  ]
+}
+```
+
+### Using top level options
+
+```typescript
+export default {
+  modules: [
+    '@vue-storefront/nuxt-gtag'
+  ],
+  gTag: {
+    /* module options */
+  }
+}
+```
+
+## Module Options
+
+```typescript
+export type Options = Partial<{
+  bootstrap: boolean;
+  config: Partial<{
+    id: string;
+    params:
+      | {
+        eventCallback: () => void;
+        eventTimeout: number;
+        groups: string | string[];
+        sendTo: string | string[];
+      }
+      | Record<string, unknown>;
+  }>;
+  customPreConnectOrigin: string;
+  customResourceURL: string;
+  debug: boolean;
+  defaultGroupName: string;
+  deferScriptLoad: boolean;
+  disableScriptLoad: boolean;
+  enabled: boolean;
+  dataLayerName: string;
+  includes: Partial<{
+    id: string;
+    params:
+      | {
+        eventCallback: () => void;
+        eventTimeout: number;
+        groups: string | string[];
+        sendTo: string | string[];
+      }
+      | Record<string, unknown>;
+  }>[];
+  onAfterTrack: (
+    to: VueRouter.RouteLocationNormalized,
+    from: VueRouter.RouteLocationNormalized,
+  ) => undefined;
+  onBeforeTrack: (
+    to: VueRouter.RouteLocationNormalized,
+    from: VueRouter.RouteLocationNormalized,
+  ) => undefined;
+  pageViewExcludedRoutes: Array<
+    | Record<string, unknown>
+    | string
+    | Partial<{
+        path: string;
+        name: string;
+        [key: string]: unknown;
+      }>
+    | VueRouter.RouteLocationNormalized>;
+  pageViewPrependBase: boolean;
+  pageViewScreenViewEnabled: boolean;
+  pageViewSkipSamePath: boolean;
+  pageViewTemplate: (
+    to: VueRouter.RouteLocationNormalized,
+    from?: VueRouter.RouteLocationNormalized,
+  ) => VueRouter.RouteLocationNormalized;
+  pageViewTracker: boolean;
+  pageViewUseFullPath: boolean;
+}>;
+```
+
 ## Contributing
 
 <p align="center">
@@ -78,9 +177,13 @@
 
 </p>
 
-If you like the ideas behind Vue Storefront and want to become a contributor - join our [Discord server](https://discord.vuestorefront.io/), check the [list of the active issues](https://github.com/vuestorefront-community/nuxt-gtag/issues) or contact us directly via contributors(at)vuestorefront(dot)io.
+If you like the ideas behind Vue Storefront and want to become a contributor - join
+our [Discord server](https://discord.vuestorefront.io/), check
+the [list of the active issues](https://github.com/vuestorefront-community/nuxt-gtag/issues) or contact us directly via
+contributors(at)vuestorefront(dot)io.
 
-If you have discovered a 🐜 or have feature suggestion, feel free to [create an issue](https://github.com/vuestorefront-community/nuxt-gtag/issues/new/choose) on GitHub.
+If you have discovered a 🐜 or have feature suggestion, feel free
+to [create an issue](https://github.com/vuestorefront-community/nuxt-gtag/issues/new/choose) on GitHub.
 
 ## Support us
 
@@ -95,9 +198,11 @@ You can support us in various ways:
 
 Vue Storefront is a Community effort brought to You by our great Core Team and supported by the following companies.
 
-[**See Vue Storefront partners directory**](https://www.vuestorefront.io/partner-agencies?utm_source=github.com&utm_medium=referral&utm_campaign=readme)
+[**See Vue Storefront partners
+directory**](https://www.vuestorefront.io/partner-agencies?utm_source=github.com&utm_medium=referral&utm_campaign=readme)
 
-Vue Storefront source code is completely free and released under the [MIT License](https://github.com/vuestorefront/vue-storefront/blob/master/LICENSE).
+Vue Storefront source code is completely free and released under
+the [MIT License](https://github.com/vuestorefront/vue-storefront/blob/master/LICENSE).
 
 
 [nuxt]: https://v3.nuxtjs.org/

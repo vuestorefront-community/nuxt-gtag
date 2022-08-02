@@ -11,7 +11,6 @@ export default defineNuxtModule<ModuleOptions>({
     configKey: 'gTag',
   },
   defaults: {
-    appName: null,
     bootstrap: true,
     config: {
       id: null,

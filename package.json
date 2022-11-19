@@ -21,22 +21,22 @@
     "release": "npx git-ensure -a && npx bumpp --commit --tag --push"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.0.0-rc.9",
+    "@nuxt/kit": "^3.0.0",
     "transform-object-keys": "^1.0.7",
-    "ufo": "^0.8.5"
+    "ufo": "^1.0.0"
   },
   "devDependencies": {
     "@nuxt/module-builder": "latest",
     "@nuxtjs/eslint-config-typescript": "latest",
-    "@types/prettier": "^2.7.0",
-    "@vue-storefront/eslint-config": "^1.0.17",
+    "@types/prettier": "^2.7.1",
+    "@vue-storefront/eslint-config": "^1.1.2",
     "c8": "^7.12.0",
     "commitizen": "^4.2.5",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "latest",
-    "husky": "^8.0.1",
+    "husky": "^8.0.2",
     "lint-staged": "^13.0.3",
-    "nuxt": "^3.0.0-rc.6",
+    "nuxt": "^3.0.0",
     "prettier": "^2.7.1"
   },
   "type": "module",

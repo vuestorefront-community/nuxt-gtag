@@ -1,5 +1,6 @@
-import { computed, useGtag, useRuntimeConfig } from '#imports';
+import { computed, useRuntimeConfig } from '#imports';
 import { logger } from '../utils/logger';
+import { useGtag } from '../composables/useGtag';
 
 export const useDebug = () => {
   const { gTag } = useRuntimeConfig();

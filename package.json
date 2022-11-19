@@ -17,7 +17,7 @@
     "lint:fix": "eslint src --ext .js,.ts,.vue --ignore-path .eslintignore  --fix",
     "precommit": "lint-staged",
     "prepack": "nuxt-module-build",
-    "prepare": "node ./scripts/prepare.js",
+    "prepare": "husky install",
     "release": "npx git-ensure -a && npx bumpp --commit --tag --push"
   },
   "dependencies": {

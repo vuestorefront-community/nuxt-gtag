@@ -425,11 +425,15 @@ export type QueryParams = Array<| string
   | ViewPromotionParams
   | ViewSearchResultParams
   | Date>;
+type RouteFunction = (
+  to: RouteLocationNormalized,
+  from: RouteLocationNormalized,
+) => undefined;
 
 export type Options = Partial<{
   bootstrap: boolean;
   config: Partial<{
-    id: string;
+    id: string | null;
     params: ControlParams | EventParams | Record<string, unknown>;
   }>;
   customPreConnectOrigin: string;
@@ -443,15 +447,9 @@ export type Options = Partial<{
   includes: Partial<{
     id: string;
     params: ControlParams | EventParams | Record<string, unknown>;
-  }>[];
-  onAfterTrack: (
-    to: RouteLocationNormalized,
-    from: RouteLocationNormalized,
-  ) => undefined;
-  onBeforeTrack: (
-    to: RouteLocationNormalized,
-    from: RouteLocationNormalized,
-  ) => undefined;
+  }>[] | null;
+  onAfterTrack: null | RouteFunction;
+  onBeforeTrack: null | RouteFunction;
   pageViewExcludedRoutes: Array<| Record<string, unknown>
     | string
     | Partial<{
@@ -463,10 +461,7 @@ export type Options = Partial<{
   pageViewPrependBase: boolean;
   pageViewScreenViewEnabled: boolean;
   pageViewSkipSamePath: boolean;
-  pageViewTemplate: (
-    to: RouteLocationNormalized,
-    from?: RouteLocationNormalized,
-  ) => RouteLocationNormalized;
+  pageViewTemplate: null | RouteFunction;
   pageViewTracker: boolean;
   pageViewUseFullPath: boolean;
 }>;
